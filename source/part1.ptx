@@ -42,11 +42,11 @@
 
     <xi:include href="./well-definedness.ptx" />
 
-    <!--
     <xi:include href="./choice-and-zorn.ptx" />
 
-    <xi:include href=".cardinality-of-sets.ptx" />
+    <xi:include href="./cardinality-of-sets.ptx" />
 
+    <!--
     <xi:include href="./sections/cardinality-and-hypotesis.ptx" />
 
     <xi:include href="./sections/exercise-of-chapter1.ptx" />
