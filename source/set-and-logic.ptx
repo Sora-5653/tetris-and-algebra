@@ -23,15 +23,25 @@
 
   <p>
     集合<m>A,B</m>の元<m>a, b</m>のペア<m>(a,b)</m>を<term>順序対(ordered pair)</term>といい、順序対全体の集合を<m>A\times B</m>と書き、<term>直積集合(product set)</term>という。
-    直積は次の<term>普遍性(universal property)</term>をみたす:
+    自然数<m>n</m>に対し、<m>n</m>回の直積を<m>A^n</m>で表す。
   </p>
 
   <p>
     関数という言葉は通常、数から数への対応関係のことを指すであろう。現代数学においては定義域と値域を拡張し、任意の集合とする。この概念を<term>写像(mapping)</term>という。
     これはほとんど言葉の些細な用法の違いであるが、関数といえば特に数から数への写像であると思ってよい。
     集合<m>A</m>から<m>B</m>への写像<m>f</m>のことを<m>f:A \to B</m>と書き、<m>a \in A</m>に対して<m>f(a)=b</m>が対応することを<m>a \mapsto b</m>で表す。
-    写像を定義する場合には例えば<m>f:\mathbb R \to R; x \mapsto x^2</m>などと書く。
+    写像を定義する場合には例えば<m>f:\mathbb R \to \mathbb R; x \mapsto x^2</m>などと書く(<m>\mathbb R</m>は実数の集合)。
   </p>
+
+  <p>
+    <m>f:A\to B, g:B\to C</m>で、<me>fの値域 \subseteq gの定義域</me>であるときに限り、<term>写像の合成(composition)</term><m>g \circ f</m>を、<me>g(f(x))</me>で定義する。
+  </p>
+
+  <example>
+    <p>
+      つまらない例ではあるが、<m>XY</m>平面は<m>\mathbb R^2</m>と思うことができる。
+    </p>
+  </example>
 
   <proposition xml:id="prop-product-univ">
     <statement>
@@ -53,17 +63,22 @@
       </p>
     </statement>
     <proof>
-      <p>具体的に写像を構成して示す。<ol>
-        <li>
-          
-        </li>
-       </ol>
+      <p>具体的に写像を構成して示す。
+          <me>\pi_A:A\times B;(a,b)\mapsto a,</me><me>\pi_B: A\times B;(a,b)\mapsto b</me>とおく。
+          <m>u</m>を<m>u(x):=(f_A(x),f_B(x))</m>で定義する。<m>(\pi_A \circ u)</m>は<m>x\mapsto (f_A(x),f_B(x))\mapsto f_A(x)</m>という送り方をするので、題意が従う。
+          <m>\pi_B</m>についても同じように考えれば明らかである。
+          一意性を示そう。仮に<m>u</m>の他に<m>v</m>が存在して、<me>v(x)=(s,t)\in A\times B, (\pi_A\circ v)(x)=s</me>となったとき、可換性から<m>f_A(x)=s</m>である。<m>f_A</m>は<m>\pi_A\circ u</m>とも等しかったので、<m>u</m>の定義から、結局同じ写像を考えていることになっている。
+          つまり、他に可換性を満たすような写像を考えても<m>u</m>に一致する。これはつまり一意性を意味する。
       </p>
     </proof>
   </proposition>
   <remark>
     <p>
-      
+      これは、第2部で学ぶ<term>圏論(Category theory)</term>の結果を下ろしてきたものである。直積は集合論における非常に基本的な構成法であり、のちに学ぶ群論や可換環論でも頻出する。
+      圏論的には、集合とは、集合全体の集まり(圏<m>\mathbf{Sets}</m>)の一点のようなものである。上の命題では集合のすべての直積に成り立つ普遍的性質を証明したが、群や可換環、はたまた集まりの集まり(小圏の圏)に至るまで同じ命題が成り立つ。
+      異なる対象の集まり同士の間に共通の構造を見出すことこそが圏論の一つの大きな意義である。
+      なお、直積の兄弟的存在として<term>Disjoint union(非交和)<m>A\sqcup B</m></term>がある。これは<m>{(A\times \{0\})\cup (B \times \{1\})}</m>で定義される。Disjoint unionの各元は<m>(x, 0か1)</m>という形をしているが、これは<m>x</m>の出身が0(Aから)か1(Bから)でラベル付けされているようなものと思ってよい。
+      さきほどの命題における直積をDisjoint unionに、そして写像の向きをすべて逆にすれば、Disjoint unionについても同様の命題が成立する。
     </p>
   </remark>
 
