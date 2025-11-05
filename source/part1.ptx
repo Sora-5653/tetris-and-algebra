@@ -47,10 +47,9 @@
     <xi:include href="./cardinality-of-sets.ptx" />
 
     <!--
-    <xi:include href="./sections/cardinality-and-hypotesis.ptx" />
+    <xi:include href="./cardinality-and-hypotesis.ptx" /> -->
 
-    <xi:include href="./sections/exercise-of-chapter1.ptx" />
-    -->
+    <xi:include href="./exercise-of-chapter1.ptx" />
     
   </chapter>
 

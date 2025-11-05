@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="exercise-of-chapter1" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>第1章の演習問題と略解</title>
+    <exercises xml:id="exercises-chapter1">
+        <exercise>
+            <statement>
+                <p>
+                    <m>\mathbb Rから\mathbb R</m>への全単射の例を3つ挙げよ。
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                <m>y=ax+b</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>y=x^{2n+1}</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>sinh(x)=\displayfrac{e^x+x^{-x}}{2}</m>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    全射、単射の定義を「送られる」とか「送られてくる」というような言葉を使って表現せよ。それと全射、単射の定義を照らし合わせ、形式的な定義で何を言おうとしているのかを掴め。
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    単射は、値域における2つの元が等しくないならば、それぞれ違う元から送られてきていること。
+                </p>
+                <p>
+                    全射は、値域の元を任意に取ると、それに送るような定義域の元が存在すること。
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    <m>f:A\to B</m>が全単射であることと、<m>f</m>が逆写像<m>g</m>を持つ(<m>g\circ f=id_Aかつf \circ g=id_B</m>、なお<m>id</m>は入力と出力が一致する写像)ことが同値であることを証明せよ。
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    同値を示す問題は、まず落ち着いて<m>\implies</m>と<m>\impliedby</m>それぞれの場合に、使える仮定と示すべき目標点を明確にすることから始めよ。
+                </p>
+                <p>    
+                    この場合、<m>\implies</m>側の仮定は単射であること(<m>f(a)\neq f(b)\implies a\neq b</m>)と全射であること(<m>\forall b\in B, \exists a, f(a)=b</m>)である。示すべき目標は合成写像が元<m>a</m>を動かさないことだから、まず具体的な元を<m>A</m>から取って考えてみればよいであろう。逆も同様にして考えよ。
+                </p>
+            </hint>
+        </exercise>
+    </exercises>
+</section>
