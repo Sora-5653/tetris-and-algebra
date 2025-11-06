@@ -48,6 +48,14 @@
     
 </definition>
 
-<p>集合に群構造が定義されるとき、その集合には群構造が<term>入る(induced)</term>と表現する。群の任意の元<m>a,b</m>について可換性<m>ab=ba</m>が成り立つとき、その群は<term>可換群(Commutative group)</term>という。</p>
+<p>集合に群構造が定義されるとき、その集合には群構造が<term>入る(induced)</term>と表現する。群の任意の元<m>a,b</m>について可換性<m>ab=ba</m>が成り立つとき、その群は<term>可換群(Commutative group)</term>という。可換群はアーベル群(Abelian group)や加法群(Additive group)などともいう。本によっては加法群を加群と呼んでいるが、これは大抵の場合では誤りである(加群は別の概念を指す)。</p>
+
+<definition>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+</definition>
 
 </section>
