@@ -55,6 +55,8 @@
     
     <xi:include href="./definition-group.ptx" />
 
+    <xi:include href="./def-ring-field.ptx" />
+
   </chapter>
 
 
