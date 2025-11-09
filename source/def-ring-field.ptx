@@ -52,7 +52,18 @@
     </definition>
     
     <p>
-        トリビアルだが、
+        トリビアルだが、<m>\mathbb Z, Q, R, C</m>は可換環になる。
     </p>
+
+    <example>
+        <title></title>
+        
+        
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+    </example>
 
 </section>

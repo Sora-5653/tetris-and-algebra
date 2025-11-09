@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-subgroup-and-generator">
+    <title>部分群と生成元</title>
+    
+    <p>
+        何かしらの群<m>G</m>を調べるときに、まず初めから<m>G</m>について何か考察するのは、目処が立ちにくい。
+        その代わり、<m>G</m>の構造を保持する、より小さい群を見るというのが常套手段である。したがって、次に定義する部分群の概念は基本的である。
+    </p>
+
+    <definition xml:id="def-subgroup">
+        <statement>
+            <p>
+                <m>G</m>を群とする。部分集合<m>H\subset G</m>が以下を満たすとき、<m>H</m>を<m>G</m>の<term>部分群(subgroup)</term>であるという。<ol>
+                    <li>
+                        <p>
+                            <m>1_G\in H</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>x,y\in H</m>なら<m>xy\in H</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>x\in H</m>なら<m>x^{-1}\in H</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                上に挙げた条件(2),(3)を直接確認するよりも、<m>x-y\in H</m>という形で一度に確認する方が少し楽な場面もある。
+            </p>
+        </statement>
+    </definition>
+
+    <proposition xml:id="prop-subgroup-of-cap">
+        <statement>
+            <p>
+                <m>G</m>を群、<m>H_1,H_2\in G</m>をその部分群とする。このとき、<m>H_1\cap H_2</m>も<m>G</m>の部分群である。
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <m>1_G \in H_1, H_2</m>なので、明らかに<m>1_G\in H_1\cap H_2</m>である。<m>x, y\in H_1\cap H_2</m>をとると、これは<m>H_1, H_2</m>に入っている。したがって、<m>x-y\in H_1\cap H_2</m>である。
+            </p>
+        </proof>
+    </proposition>
+
+</section>
