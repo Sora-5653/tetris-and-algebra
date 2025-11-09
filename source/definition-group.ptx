@@ -23,7 +23,7 @@
     
     <statement>
         <p>
-            空でない集合<m>G</m>に演算とよばれる写像<m>\bullet:G \to G</m>が定義されていて、以下を満たすとき、<m>G</m>は<term>群(Group)</term>であるという。<m>\bullet(a,b)</m>は以下<m>a\bullet b</m>か<m>ab</m>と書く。<ol>
+            空でない集合<m>G</m>に演算とよばれる写像<m>\bullet:G \times G \to G</m>が定義されていて、以下を満たすとき、<m>G</m>は<term>群(Group)</term>であるという。<m>\bullet(a,b)</m>は以下<m>a\bullet b</m>か<m>ab</m>と書く。<ol>
                 <li>
                     <p>
                         単位元とよばれる元<m>e\in G</m>があり、任意の<m>a\in Gに対してae=ea=a</m>となる。<m>e</m>はふつう<m>1_G</m>と書く。
