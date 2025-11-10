@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-subgroup-and-generator">
+    <title>部分群と生成元</title>
+    
+    <p>
+        何かしらの群<m>G</m>を調べるときに、まず初めから<m>G</m>について何か考察するのは、目処が立ちにくい。
+        その代わり、<m>G</m>の構造を保持する、より小さい群を見るというのが常套手段である。したがって、次に定義する部分群の概念は基本的である。
+    </p>
+
+    <definition xml:id="def-subgroup">
+        <statement>
+            <p>
+                <m>G</m>を群とする。部分集合<m>H\subset G</m>が以下を満たすとき、<m>H</m>を<m>G</m>の<term>部分群(subgroup)</term>であるという。<ol>
+                    <li>
+                        <p>
+                            <m>1_G\in H</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>x,y\in H</m>なら<m>xy\in H</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>x\in H</m>なら<m>x^{-1}\in H</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                上に挙げた条件(2),(3)を直接確認するよりも、<m>x-y\in H</m>という形で一度に確認する方が少し楽な場面もある。
+            </p>
+        </statement>
+    </definition>
+
+    <proposition xml:id="prop-subgroup-of-cap">
+        <statement>
+            <p>
+                <m>G</m>を群、<m>H_1,H_2\in G</m>をその部分群とする。このとき、<m>H_1\cap H_2</m>も<m>G</m>の部分群である。
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <m>1_G \in H_1, H_2</m>なので、明らかに<m>1_G\in H_1\cap H_2</m>である。<m>x, y\in H_1\cap H_2</m>をとると、これは<m>H_1, H_2</m>に入っている。したがって、<m>x-y\in H_1\cap H_2</m>である。
+            </p>
+        </proof>
+    </proposition>
+
+    <p>
+        <m>G</m>を群、<m>S\subset G</m>を部分集合とする。<m>S</m>の元を<m>G</m>内で<m>x^{\pm 1}_1 \dots  x^{\pm 1}_n</m>という形に自由に掛け合わせたとき、その全体を<m>(S)</m>と書き、<m>S</m>の元による<term>語(word)</term>1という。なお、<m>n=0</m>なら<m>1_G</m>を表すとする。
+    </p>
+
+    <proposition xml:id="prop-generated-subgroup">
+        <statement>
+            <p>
+                <m>(S)</m>は<m>G</m>の部分群である。この<m>(S)</m>は<m>S</m>を含む最小の部分群である。
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <m>n=0</m>の場合により、<m>1_G\in (S)</m>である。<m>x,y\in (S)</m>をとると<m>x=x^{\pm 1}_1x^{\pm 1}_2\cdots x^{\pm 1}_n, y=x^{\pm 1}_{n+1}\cdots x^{\pm 1}_m</m>であり、<m>x-y=xy^{-1}</m>も語である。よって<m>(S)</m>は<m>G</m>の部分群である。
+            </p>
+            <p>
+                最小性は明らかである。実際、題意は「部分群<m>H\in G</m>が<m>S\subset H</m>なら、<m>(S)\subset H</m>である」と言い換えることができる。そのような<m>H</m>の存在を仮定する。<m>x\in (S)</m>をとる。<m>x</m>は<m>S</m>の元の積だから、同じ演算によって<m>H</m>の元となる。したがって題意が示された。
+            </p>
+        </proof>
+    </proposition>
+
+</section>
