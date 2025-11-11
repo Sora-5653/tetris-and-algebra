@@ -101,7 +101,7 @@
 <example>
     <statement>
         <p>
-            同様にして<m>Q\setminus\{0\},R\setminus\{0\},C\setminus\{0\}</m>は、通常の乗法<m>\times</m>、逆元を<m>\frac{1}{x}</m>とすることで群になる。これも無限群である。
+            同様にして<m>\mathbb Q\setminus\{0\},\mathbb R\setminus\{0\},\mathbb C\setminus\{0\}</m>は、通常の乗法<m>\times</m>、逆元を<m>\frac{1}{x}</m>とすることで群になる。これも無限群である。
         </p>
     </statement>
 </example>
