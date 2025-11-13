@@ -132,7 +132,7 @@
             <answer>
                 <p>
                     <m>a\in A, b\in B</m>に対して、<m>A\times B</m>の元は<m>(a,b)</m>という形になっているのであった。仮定より、全単射<m>f:A\to A', g:B\to B'</m>が与えられている。
-                    <m>\pi: A\times B</m>を<m>(a, b)\mapsto (f(a), g(b))</m>で定義すれば、これは明らかに全単射である。実際、<m>\pi(a,b)\neq \pi(a',b')</m>なら<m>(f(a),g(b))\neq (f(a'),g(b'))</m>であり、
+                    <m>\pi: A\times B\to A</m>を<m>(a, b)\mapsto (f(a), g(b))</m>で定義すれば、これは明らかに全単射である。実際、<m>\pi(a,b)\neq \pi(a',b')</m>なら<m>(f(a),g(b))\neq (f(a'),g(b'))</m>であり、
                     <m>f,g</m>は単射でもあるので<m>\pi</m>の単射性が成り立つ。全射性も同様にして、<m>f,g</m>が全射であることから、<m>\pi</m>の逆像が空になる元は存在しないので全射性も言える。
                 </p>
             </answer>
