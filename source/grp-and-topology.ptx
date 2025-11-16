@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-grp-and-topology">
+    <title>コラム:群とトポロジー</title>
+    
+    <p>
+        まず位相空間の定義をする前に、微積分の話をしよう。
+    </p>
+
+    <p>
+        <m>u\lt x \lt v</m>を満たす<m>x</m>を<m>(u,v)</m>で表し、これを<term>開区間</term>と呼ぶ。同様に<m>u\leq x \leq v</m>を<m>x\in [u,v]</m>で表し、閉区間とよぶ。
+    </p>
+
+    <definition xml:id="def-epsilon-delta">
+        <statement>
+            <p>
+                <m>y=f(x)</m>を<m>(u,v)</m>で定義された関数とし、<m>a\in (u,v)</m>とする。関数<m>y=f(x)</m>が<m>x=a</m>で<term>連続(continuous)</term>であるとは、任意の実数<m>q\gt 0</m>に対して実数<m>r \gt 0</m>が存在して、<m>x\in (a-r,a+r)\subset (u,v)</m>であり、<m>|f(x)-f(a)|\lt q</m>となるときをいう。
+            </p>
+        </statement>
+    </definition>
+
+    <p>
+        非常にわかりにくい定義だが、次のようにグラフを書いてみるとよい:
+    </p>
+    <image width="70%">
+        <latex-image>
+            \usetikzlibrary{patterns}
+            \begin{tikzpicture}
+
+                \draw[->, >=stealth, semithick] (-1,0)--(6,0)node[right] {$x$};
+                \draw[->, >=stealth, semithick] (0,-1)--(0,5)node[left] {$y$};
+                
+                \node[below] (a-r) at (2.25,0) {$a-r$}; \node[below] (a) at (3,0) {$a$};
+                \node[below] (a+r) at (3.75,0) {$a+r$}; \node[left] at (0,1.2) {$f(a)-q$};
+                \node[left] at (0,2.525) {$f(a)+q$}; \node[left] at (0,1.8) {$f(a)$};
+                \fill[gray!30] (0,1.2)--(0,2.525)--(6,2.525)--(6,1.25);
+                \fill[lightgray] plot[domain=2.25:3.75, smooth](\x,{exp(\x/3.6)-0.5})--(3.75,0)--(2.25,0)--(2.25,1.368)--cycle;
+                \draw plot[domain=-0.5:6, smooth](\x,{exp(\x/3.6)-0.5});
+                \draw (3,1.8)--(3,0);
+                \draw (0,1.8)--(3,1.8);
+                
+
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+
+    <p>
+        今の定義は、<m>x</m>が<m>a</m>に近づくとき、<m>f(x)</m>が<m>f(a)</m>に近づくことを不等式で表すものである。
+        <m>x\in (a-r,a+r)</m>とはそれすなわち<me>|x-a|\lt r \tag{1.1}</me>であり、「<m>x\in (u,v)</m>ならば<m>|f(x)-f(a)|\lt q</m>」は、任意の、どれだけ小さくとってもよい実数<m>q</m>に対して、(1.1)をみたす<m>r</m>を見つけてこられることを意味する。
+        したがってこの定義は、<m>x</m>と<m>a</m>の差が非常に小さければ、それに応じて<m>f(x)</m>と<m>f(a)</m>の差も非常に小さくなるというふうなことを、「近づく」とかいう曖昧な言葉を使わずに定義したものである。
+    </p>
+    <p>
+        さて、関数の連続性とはさしづめ「関数のグラフが繋がっていること」と見てよい。これは定義からわかるように、実数を任意にとることで小ささを表現するという、実数体でしか意味をなさない定義の仕方をしている。一般の集合や体に大小関係<m>\leq</m>は定義されないわけだから、これを任意の集合に一般化できないか？というのが位相空間を考える動機である。
+    </p>
+
+    <p>
+        では、位相空間の定義をしよう。
+    </p>
+    <definition xml:id="def-top-space">
+        <statement>
+            <p>
+                <m>X</m>を集合とする。<m>X</m>上の<term>開集合系(open set system)</term>あるいは<term>位相(topology)</term>とは、<m>\mathcal O\subset \mathcal P(X)</m>が次の条件を満たすことをいう:<ol>
+                    <li>
+                        <p>
+                            <m>\emptyset, X \in \mathcal P(A)</m>である。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(U_i)_{i\in I}</m>が<m>\mathcal P(A)</m>の族なら、<m>\bigcup_{i\in I}U_i \in \mathcal O</m>である。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(U_i)_{i\in I}</m>が<m>\mathcal P(A)</m>の族で<m>I</m>が有限なら、<m>\bigcap_{i\in I} U_i\in \mathcal P(A)</m>である。
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </definition>
+
+    <p>
+        これもなかなかにわかりにくい定義である。だが、先ほど言ったとおり位相空間の理論は<m>\mathbb R</m>や<m>\mathbb R^n</m>での連続性を抽象化しているため、対応する現象を紹介しつつ話を進めていこう。
+    </p>
+
+    <p>
+        まず(1)の条件だが、これは<m>\mathbb R, \emptyset</m>が開区間になりえることを言っている。空集合の場合は<m>(a,a)</m>とすればよい。実際<m>(a,a)</m>は<m>a\lt x\lt a</m>を満たす<m>x</m>のことだが、そんなものはない。
+    </p>
+    <p>
+        実数全体は少しトリッキーだが、<m>(-\infinity, \infinity)</m>とすればよい。
+    </p>
+
+</section>
