@@ -79,4 +79,64 @@
         </statement>
     </example>
 
+    <p>
+        上の例は2つの元を持つ体だったが、ある整式を考察することにより、素数個の元を持つ体を定義できる。まずはユークリッドの互除法から紹介しよう。
+    </p>
+
+    <proposition>
+        <title>ユークリッドの互除法</title>
+        
+        <statement>
+            <p>
+               <m>a\gt b\gt 0</m>を整数とする。<m>a</m>を<m>b</m>で割った商を<m>q</m>、あまりを<m>r</m>とすると、<m>a,b</m>の最大公約数<m>\mathrm{GCD}(a,b)</m>は<m>b,r</m>の最大公約数<m>\mathrm{GCD}(b,r)</m>に等しい。         
+            </p>
+        </statement>
+        <proof>
+            <p>
+                商とあまりの関係は式で表せることを思い出そう。つまり、<m>q\in \mathbb Z</m>があり、<me>a=qb+r \tag{$a\leq r\lt b$}</me>である。<m>d\in \mathbb Z</m>を正の数とする。<m>d</m>が<m>a,b</m>のいずれをも割り切るなら、<m>a-qb</m>も割り切る。よって<m>d</m>は<m>r</m>を割り切る。よって、<m>\mathrm{GCD}(a,b)\leq \mathrm{GCD}(b,r)</m>である。逆に<m>d</m>が<m>b,r</m>を割り切るとすると、<m>d</m>は<m>qb+r</m>を割り切り、よって<m>a,b</m>を割り切る。これで<m>\mathrm{GCD}(a,b)=\mathrm{GCD}(b,r)</m>が言えた。
+            </p>
+        </proof>
+    </proposition>
+
+    <p>
+        ユークリッドの互除法は、たとえば<m>7x+5y=\mathrm{GCD}(a,b)</m>を満たすような整数解を求めよ、という典型的な「Bézout(べズー)方程式」の解放法に応用ができる。
+    </p>
+
+    <p>
+        この場合では、<me>7=5+2</me><me>5=2\times 2+1</me>なので<m>\mathrm{GCD}(7,5)=1</m>であり、<me>
+            1=5-2\times 2 &= 5-2\times(7-5) \\ &= 5-2\times 7-2\times 5 \\ &=3\tiems 5+(-2)\times 7
+        </me>となり、<m>(3,-2)</m>が解の一つであるといえる。ユークリッドの互除法によって次の定理を得る。
+    </p>
+
+    <theorem>
+        <title>Bézoutの等式</title>
+        
+        
+        <statement>
+            <p>
+                <m>\mathrm{GCD}(a,b)=d</m>なら、<me>ax+by=d</me>を満たす<m>(x,y)</m>が必ず存在する。
+            </p>
+        </statement>
+    </theorem>
+    
+    <corollary>
+        <statement>
+            <p>
+                <m>a,b\in \mathbb Z</m>について、<m>ax+by=1</m>を満たす整数<m>(x,y)</m>が存在する。
+            </p>
+        </statement>
+    </corollary>
+
+    <p>
+        整数<m>a</m>を任意にとる。系の<m>b</m>を素数<m>p</m>に対して適用し、等式<m>ax+bp=1</m>を得る。これを<m>\mathbb Z</m>から<m>\mathbb Z/p\mathbb Z</m>へ自然な写像で送ることにより、<m>ax = 1</m>となる。これは整数<m>a</m>に対して<m>x</m>がその乗法逆元であることを示している。これによって「有限体」の概念を定義できる。
+    </p>
+
+    <definition xml:id="def-finite-field">
+        <statement>
+            <p>
+               <m>\mathbb Z/p\mathbb Z</m>は位数<m>p</m>の体である。これを<term>有限体(Finite field, Galois field)</term>という。 
+            </p>
+        </statement>
+    </definition>
+
 </section>
