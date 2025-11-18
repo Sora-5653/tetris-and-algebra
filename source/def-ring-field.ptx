@@ -122,7 +122,7 @@
     <corollary>
         <statement>
             <p>
-                <m>a,b\in \mathbb Z</m>について、<m>\mathrm{GCD}(a,b)=1<\m>なら<m>ax+by=1</m>を満たす整数<m>(x,y)</m>が存在する。
+                <m>a,b\in \mathbb Z</m>について、<m>\mathrm{GCD}(a,b)=1</m>なら<m>ax+by=1</m>を満たす整数<m>(x,y)</m>が存在する。
             </p>
         </statement>
     </corollary>
