@@ -59,20 +59,20 @@
     <definition xml:id="def-top-space">
         <statement>
             <p>
-                <m>X</m>を集合とする。<m>X</m>上の<term>開集合系(open set system)</term>あるいは<term>位相(topology)</term>とは、<m>\mathcal O\subset \mathcal P(X)</m>が次の条件を満たすことをいう:<ol>
+                <m>X</m>を集合とする。<m>X</m>上の<term>開集合系(open set system)</term>あるいは<term>位相(topology)</term>とは、<m>\mathscr O\subset \mathcal P(X)</m>が次の条件を満たすことをいう:<ol>
                     <li>
                         <p>
-                            <m>\emptyset, X \in \mathcal P(A)</m>である。
+                            <m>\emptyset, X \in \mathscr O</m>である。
                         </p>
                     </li>
                     <li>
                         <p>
-                            <m>(U_i)_{i\in I}</m>が<m>\mathcal P(A)</m>の族なら、<m>\bigcup_{i\in I}U_i \in \mathcal O</m>である。
+                            <m>(U_i)_{i\in I}</m>が<m>\mathcal P(X)</m>の族なら、<m>\bigcup_{i\in I}U_i \in \mathcal O</m>である。
                         </p>
                     </li>
                     <li>
                         <p>
-                            <m>(U_i)_{i\in I}</m>が<m>\mathcal P(A)</m>の族で<m>I</m>が有限なら、<m>\bigcap_{i\in I} U_i\in \mathcal P(A)</m>である。
+                            <m>(U_i)_{i\in I}</m>が<m>\mathcal P(X)</m>の族で<m>I</m>が有限なら、<m>\bigcap_{i\in I} U_i\in \mathcal P(A)</m>である。
                         </p>
                     </li>
                 </ol>
@@ -88,7 +88,7 @@
         まず(1)の条件だが、これは<m>\mathbb R, \emptyset</m>が開区間になりえることを言っている。空集合の場合は<m>(a,a)</m>とすればよい。実際<m>(a,a)</m>は<m>a\lt x\lt a</m>を満たす<m>x</m>のことだが、そんなものはない。
     </p>
     <p>
-        実数全体は少しトリッキーだが、<m>(-\infinity, \infinity)</m>とすればよい。
+        実数全体は少しトリッキーだが、<m>(-\infty, \infty)</m>とすればよい。
     </p>
 
 </section>

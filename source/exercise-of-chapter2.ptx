@@ -70,12 +70,12 @@
     <exercise>
         <statement>
             <p>
-                <m>\mathbb R</m>を加法群とみなすとき、<m>a\in \mathbb R^\times</m>に対して<m>\mathbb R/\mathbb Z\cong \mathbb R/\mathbb a\mathbb Z</m>であることを示せ。
+                <m>\mathbb R</m>を加法群とみなすとき、<m>a\in \mathbb R^\times</m>に対して<m>\mathbb R/\mathbb Z\cong \mathbb R/a\mathbb Z</m>であることを示せ。
             </p>
         </statement>
         <answer>
             <p>
-                準同型<m>\mathbb R\to \mathbb R/a\mathbb Z</m>を、核が<m>\mathbb Z</m>であるように作ればよい。<m>f_a(x)=ax+a\mathbb Z</m>とすると、<me>f_a(0)=a\mathbb Z, f_a(x)+f_a(y)=a(x+y)+a\mathbb Z=f_a(x+y)</me>だから準同型。<m>ax+a\mathbb Z</m>が0となるのは<m>x\in Z</m>のときに限るから<m>\ker(f_a(x))=\mathbb Z</m>である。さらに、<m>x\in \mathbb R/a\mathbb Z</m>は<m>x+an,(n\in \mathbb Z)</m>の形をしているから、<m>\frac{x}{a}</m>などをとれば逆像は空ではない。よって<m>f_a</m>は全射であり、すなわち<m>\mathrm{Im}(f_a)=\mathbb R/a\mathbb Z</m>である。よって準同型定理より<m>\mathbb R/\mathbb Z\cong \mathrm{Im}(f_a)=\mathbb R/a\mathbb Z</m>となる。
+                準同型<m>\mathbb R\to \mathbb R/a\mathbb Z</m>を、核が<m>\mathbb Z</m>であるように作ればよい。<m>f_a(x)=ax+a\mathbb Z</m>とすると、<me>f_a(0)=a\mathbb Z, f_a(x)+f_a(y)=a(x+y)+a\mathbb Z=f_a(x+y)</me>だから準同型。<m>ax+a\mathbb Z</m>が0となるのは<m>x\in \mathbb Z</m>のときに限るから<m>\ker(f_a(x))=\mathbb Z</m>である。さらに、<m>x\in \mathbb R/a\mathbb Z</m>は<m>x+an,(n\in \mathbb Z)</m>の形をしているから、<m>\frac{x}{a}</m>などをとれば逆像は空ではない。よって<m>f_a</m>は全射であり、すなわち<m>\mathrm{Im}(f_a)=\mathbb R/a\mathbb Z</m>である。よって準同型定理より<m>\mathbb R/\mathbb Z\cong \mathrm{Im}(f_a)=\mathbb R/a\mathbb Z</m>となる。
             </p>
         </answer>
     </exercise>
@@ -86,13 +86,13 @@
         
         <statement>
             <p>
-                有理数体<m>\mathbb Q</m>上の<term>楕円曲線(elliptic curve)</term>とは、<m>a,b,c,d\in Q</m>に対して<m>y^2=ax^2+bx^2+cx+d</m>であり、かつ<m>a\neq 0</m>で、右辺の三次式が重根を持たない(判別式<m>=-16(4a^3+27b^2)\neq 0</m>)ものの関数としてのグラフである。次の問いに答えよ。<ol>
+                有理数体<m>\mathbb Q</m>上の<term>楕円曲線(elliptic curve)</term>とは、<m>a,b,c,d\in \mathbb Q</m>に対して<m>y^2=ax^3+bx^2+cx+d</m>であり、かつ<m>a\neq 0</m>で、右辺の三次式が重根を持たない(判別式<m>=-16(4a^3+27b^2)\neq 0</m>)ものの関数としてのグラフである。次の問いに答えよ。<ol>
                     <li>
                         <p>
                             <m>E</m>を<m>\mathbb Q</m>上の楕円曲線とする。<m>E</m>を定義する方程式の解集合<me>V(E)=\{(x,y)\in \mathbb Q\times \mathbb Q;y^2=ax^3+bx^2+cx+d\}</me>に、無限遠点とよばれる一点<m>O\neq (0,0)</m>を加えた<m>E(\mathbb Q):=V(E)\cup \{O\}</m>に可換群の構造を与える、次の文章の空欄<m>\mathrm{(i)\sim (vii)}</m>を埋めよ。
                         </p>
                         <p>
-                            <m>O</m>を単位元とする。<m>P=O</m>なら<m>P+Q=Q,</m><m>Q=O</m>なら<m>P+Q=Q</m>とする。<m>P,Q\neq O</m>の時の和を定める。
+                            <m>O</m>を単位元とする。<m>P=O</m>なら<m>P+Q=Q,</m><m>Q=O</m>なら<m>P+Q=P</m>とする。<m>P,Q\neq O</m>の時の和を定める。
                         </p>
                         <p>
                             <m>P(x_1,y_1),Q(x_2,y_2)</m>とおく。<m>x_1\neq x_2</m>と仮定する。このとき直線<m>PQ</m>は<me>y=\dfrac{(\mathrm i)}{(\mathrm{ii})}(\mathrm{iii})+y_1 \tag{1.1}</me>で与えられる。この直線と楕円曲線の交点を求める。先ほどの式を<m>E</m>の定義式に代入して、
@@ -120,9 +120,9 @@
                             つぎに、<m>x_1=x_2</m>の場合を定義する。
                         </p>
                         <p>
-                            <m>y_3=-y_2</m>の場合は<m>P+Q=O</m>と定める。<m>y_1\neq -y_2</m>の場合、<m>P=Q, y_1\neq 0</m>である。この場合、<m>PQ</m>は<m>E</m>の<m>P</m>における接線(ただ1つの点で<m>E</m>と接する直線)で、次の式で与えられる:
+                            <m>y_1=-y_2</m>の場合は<m>P+Q=O</m>と定める。<m>y_1\neq -y_2</m>の場合、<m>P=Q, y_1\neq 0</m>である。この場合、<m>PQ</m>は<m>E</m>の<m>P</m>における接線(ただ1つの点で<m>E</m>と接する直線)で、次の式で与えられる:
                             <me>
-                                y=\dfrac{3ax_1^2+2bx_1+c}{2y_1}(x-x_1)+y_1 \tag{(1.2)}
+                                y=\dfrac{3ax_1^2+2bx_1+c}{2y_1}(x-x_1)+y_1 \tag{1.2}
                             </me>(1.2)を<m>E</m>の定義式に代入して、再び
                             <me>
                                 qx^3+rx^2+sx+t=0 \tag{$q,r,s,t\in \mathbb Q, q\neq 0$}
