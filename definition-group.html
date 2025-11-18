@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>群の定義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="テトリスと代数学">
+<meta property="book:author" content="著者: Sora3">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.19';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">テトリスと代数学</span> <span class="subtitle">Algebra and its application to Tetris</span></a></h1>
+<p class="byline">著者: Sora3</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="group-theory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="group-theory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-def-ring-field.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-1.html" class="internal"><span class="codenumber">I</span> <span class="title">代数学の基礎</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="set-theory.html" class="internal"><span class="codenumber">1</span> <span class="title">集合論</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sets-and-mathematics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">集合と現代数学</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="set-and-logic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">集合と論理</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="well-definedness.html" class="internal"><span class="codenumber">1.3</span> <span class="title">well-definedness</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="choice-and-zorn.html" class="internal"><span class="codenumber">1.4</span> <span class="title">選択公理とZorn’s Lemma</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cardinality-of-sets.html" class="internal"><span class="codenumber">1.5</span> <span class="title">集合の濃度</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercise-of-chapter1.html" class="internal"><span class="codenumber">1.6</span> <span class="title">第1章の演習問題と略解</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercise-of-chapter1.html#exercises-chapter1" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="group-theory.html" class="internal"><span class="codenumber">2</span> <span class="title">群論</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="definition-group.html" class="internal"><span class="codenumber">2.1</span> <span class="title">群の定義</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-def-ring-field.html" class="internal"><span class="codenumber">2.2</span> <span class="title">環, 体の定義</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subgroup-and-generator.html" class="internal"><span class="codenumber">2.3</span> <span class="title">部分群と生成元</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-homomorphism.html" class="internal"><span class="codenumber">2.4</span> <span class="title">準同型写像</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-quot-grp.html" class="internal"><span class="codenumber">2.5</span> <span class="title">剰余群</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quot-grp.html#subsec-equiv-relation" class="internal"><span class="codenumber">2.5.1</span> <span class="title">同値関係</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quot-grp.html#subsec-quot-group" class="internal"><span class="codenumber">2.5.2</span> <span class="title">剰余類</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quot-grp.html#sec-quot-grp-9" class="internal"><span class="codenumber">2.5.3</span> <span class="title">剰余群</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-hom-theorems.html" class="internal"><span class="codenumber">2.6</span> <span class="title">準同型定理</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-hom-theorems.html#sec-hom-theorems-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">可換図式</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-hom-theorems.html#sec-hom-theorems-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">準同型定理</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-grp-and-topology.html" class="internal"><span class="codenumber">2.7</span> <span class="title">コラム:群とトポロジー</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-ex-chap2.html" class="internal"><span class="codenumber">2.8</span> <span class="title">第2章の演習問題と略解</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-ex-chap2.html#sec-ex-chap2-2" class="internal"><span class="codenumber">2.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-grp-action.html" class="internal"><span class="codenumber">3</span> <span class="title">群作用</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-grp-action.html" class="internal"><span class="codenumber">3.1</span> <span class="title">群作用</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-appendix.html" class="internal"><span class="codenumber">II</span> <span class="title">付録</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sec-math-expressions.html" class="internal"><span class="codenumber">4</span> <span class="title">数学的な言い回し</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-agyou.html" class="internal"><span class="codenumber">4.1</span> <span class="title">あ行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-kagyou.html" class="internal"><span class="codenumber">4.2</span> <span class="title">か行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-sagyou.html" class="internal"><span class="codenumber">4.3</span> <span class="title">さ行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-tagyou.html" class="internal"><span class="codenumber">4.4</span> <span class="title">た行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-nagyou.html" class="internal"><span class="codenumber">4.5</span> <span class="title">な行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-hagyou.html" class="internal"><span class="codenumber">4.6</span> <span class="title">は行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-magyou.html" class="internal"><span class="codenumber">4.7</span> <span class="title">ま行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-yagyou.html" class="internal"><span class="codenumber">4.8</span> <span class="title">や行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-ragyou.html" class="internal"><span class="codenumber">4.9</span> <span class="title">ら行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-wagyou.html" class="internal"><span class="codenumber">4.10</span> <span class="title">わ行</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-top-space.html" class="internal"><span class="codenumber">5</span> <span class="title">位相空間論</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-top-space.html" class="internal"><span class="codenumber">5.1</span> <span class="title">位相空間</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="definition-group"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">群の定義</span>
+</h2>
+<div class="para" id="definition-group-2">群とは演算の定義された集合である。これは数であってもよいし、「群の公理」をみたす集合ならなんでも群と呼んでよい。 数の概念と真反対にある、直線の束のような図形的対象に群構造が入る場合すらも存在する(Picard群)。この多くを包括する抽象性こそが、群、より一般に代数構造の強みであり、この分野の難しさでもある。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-group-3">のちに学ぶ「パリティ追跡理論」では地形に対する操作が群をなす。それがある部分集合への「作用」を定めることを確認することにより、 具体的な地形の表示をいちいち気にすることなくパリティの変化の情報を取り出すことができる。(第2部参照) ほかにも、有名な「5次以上の方程式を代数的に解くことはできない」という命題も、方程式の根がなす群と、 代数的に方程式を解く過程を表現する"体"(四則演算ができる集合)との対応関係を眺めることで証明できるのだ。(第4章3節参照)<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-group-4">群論の諸概念は決して難しいものばかりではない。しかし、その一般性と他の概念との有機的なつながりが、群論の世界を非常に豊かなものにしている。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-group-5"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">群.</span>
+</h3>
+<div class="para logical" id="definition-group-5-2-1">
+<div class="para">空でない集合<span class="process-math">\(G\)</span>に演算とよばれる写像<span class="process-math">\(\bullet:G \times G \to G\)</span>が定義されていて、以下を満たすとき、<span class="process-math">\(G\)</span>は<dfn class="terminology">群(Group)</dfn>であるという。<span class="process-math">\(\bullet(a,b)\)</span>は以下<span class="process-math">\(a\bullet b\)</span>か<span class="process-math">\(ab\)</span>と書く。</div>
+<ol class="decimal" id="definition-group-5-2-1-8">
+<li id="definition-group-5-2-1-8-1">
+<div class="para" id="definition-group-5-2-1-8-1-1">単位元とよばれる元<span class="process-math">\(e\in G\)</span>があり、任意の<span class="process-math">\(a\in Gに対してae=ea=a\)</span>となる。<span class="process-math">\(e\)</span>はふつう<span class="process-math">\(1_G\)</span>と書く。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-5-2-1-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#definition-group-5-2-1-8-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="definition-group-5-2-1-8-2">
+<div class="para" id="definition-group-5-2-1-8-2-1">任意の<span class="process-math">\(a\in G\)</span>に対して<span class="process-math">\(a^{-1}\in G\)</span>という元が存在し、<span class="process-math">\(aa^{-1}=a^{-1}a=1_G\)</span>となる。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-5-2-1-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#definition-group-5-2-1-8-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="definition-group-5-2-1-8-3">
+<span class="heading li--heading"><span class="title li--heading-title">(結合法則).</span></span><div class="para" id="definition-group-5-2-1-8-3-2">すべての<span class="process-math">\(a,b,c\in G\)</span>に対し、<span class="process-math">\(a(bc)=(ab)c\)</span>が成り立つ。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-5-2-1-8-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3: (結合法則)"><a href="#definition-group-5-2-1-8-3" title="Copy heading and permalink for Item 3: (結合法則)" aria-label="Copy heading and permalink for Item 3: (結合法則)">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.1.1: 群"><a href="#definition-group-5" title="Copy heading and permalink for Definition 2.1.1: 群" aria-label="Copy heading and permalink for Definition 2.1.1: 群">🔗</a></div></article><div class="para" id="definition-group-6">集合に群構造が定義されるとき、その集合には群構造が<dfn class="terminology">入る(induced)</dfn>と表現する。群の任意の元<span class="process-math">\(a,b\)</span>について可換性<span class="process-math">\(ab=ba\)</span>が成り立つとき、その群は<dfn class="terminology">可換群(Commutative group)</dfn>という。可換群はアーベル群(Abelian group)や加法群(Additive group)などともいう。本によっては加法群を加群と呼んでいるが、これは大抵の場合では誤りである(加群は別の概念を指す)。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-group-7"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">群の位数.</span>
+</h3>
+<div class="para" id="definition-group-7-2-1">
+<span class="process-math">\(G\)</span>を群とする。その元の個数<span class="process-math">\(|G|\)</span>を群<span class="process-math">\(G\)</span>の<dfn class="terminology">位数(Order)</dfn>という。位数有限な群のことを<dfn class="terminology">有限群(finite group)</dfn>といい、有限でない群を<dfn class="terminology">無限群</dfn>という。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.1.2: 群の位数"><a href="#definition-group-7" title="Copy heading and permalink for Definition 2.1.2: 群の位数" aria-label="Copy heading and permalink for Definition 2.1.2: 群の位数">🔗</a></div></article><div class="para logical" id="definition-group-8">
+<div class="para">
+<span class="process-math">\(a^0:=1, a^n:=\underbrace{a\cdots a}_{n回}, a^{-n}:=(a^n)^{-1}\)</span>と定義する。明らかに、<span class="process-math">\(n, m\in \mathbb Z(\mathbb Zは整数)\)</span>に対して<dfn class="terminology">指数法則</dfn>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a^{n+m}=a^na^m, (a^n)^m=a^{nm}
+\end{equation*}
+</div>
+<div class="para">が成り立つ。</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-group-9">群の例を与える。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="definition-group-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="definition-group-10-1-1">
+<div class="para">慣れ親しんだ数体系</div>
+<ol class="decimal" id="definition-group-10-1-1-1">
+<li id="definition-group-10-1-1-1-1">
+<div class="para" id="definition-group-10-1-1-1-1-1">整数<span class="process-math">\(\mathbb Z,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-group-10-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#definition-group-10-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="definition-group-10-1-1-1-2">
+<div class="para" id="definition-group-10-1-1-1-2-1">有理数<span class="process-math">\(\mathbb Q,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-group-10-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#definition-group-10-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="definition-group-10-1-1-1-3">
+<div class="para" id="definition-group-10-1-1-1-3-1">実数<span class="process-math">\(\mathbb R,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-group-10-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#definition-group-10-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="definition-group-10-1-1-1-4">
+<div class="para" id="definition-group-10-1-1-1-4-1">複素数<span class="process-math">\(\mathbb C\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-group-10-1-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#definition-group-10-1-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="para">は、通常用いる加法<span class="process-math">\(+\)</span>、任意の元<span class="process-math">\(x\)</span>に対する逆元を<span class="process-math">\(-x\)</span>とすることで明らかに群になる。これらは無限群である。</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.1.3"><a href="#definition-group-10" title="Copy heading and permalink for Example 2.1.3" aria-label="Copy heading and permalink for Example 2.1.3">🔗</a></div></article></details><details id="definition-group-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="definition-group-11-1-1">同様にして<span class="process-math">\(\mathbb Q\setminus\{0\},\mathbb R\setminus\{0\},\mathbb C\setminus\{0\}\)</span>は、通常の乗法<span class="process-math">\(\times\)</span>、逆元を<span class="process-math">\(\frac{1}{x}\)</span>とすることで群になる。これも無限群である。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.1.4"><a href="#definition-group-11" title="Copy heading and permalink for Example 2.1.4" aria-label="Copy heading and permalink for Example 2.1.4">🔗</a></div></article></details><details id="definition-group-12" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">有限群の例.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="definition-group-12-2-1">
+<span class="process-math">\(G={a,b}\)</span>とする。<span class="process-math">\(aa=a,ab=b,ba=b,bb=a\)</span>とすると、これは明らかに群である。<span class="process-math">\(|G|=2\)</span>なのでこれは有限群である。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="figure-trivial-finite-group"><div class="para logical" id="figure-trivial-finite-group-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|cc}
+\cdot &amp; a &amp; b \\
+\hline
+a   &amp; a &amp; b \\
+b   &amp; b &amp; a
+\end{array}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#figure-trivial-finite-group-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G\)</span>の<dfn class="terminology">乗法表(Multiplication table)</dfn>。<div class="autopermalink" data-description="Figure 2.1.6"><a href="#figure-trivial-finite-group" title="Copy heading and permalink for Figure 2.1.6" aria-label="Copy heading and permalink for Figure 2.1.6">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 2.1.5: 有限群の例"><a href="#definition-group-12" title="Copy heading and permalink for Example 2.1.5: 有限群の例" aria-label="Copy heading and permalink for Example 2.1.5: 有限群の例">🔗</a></div></article></details><div class="para" id="definition-group-13">なお、群の単位元は一意的である。実際、<span class="process-math">\(1,e\)</span>が単位元の性質を満たすなら、<span class="process-math">\(1=1e=e1=e\)</span>である。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="definition-group-14" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="definition-group-14-1-1">
+<span class="process-math">\(X\)</span>を集合とするとき、全単射<span class="process-math">\(\sigma: X\to X\)</span>を<dfn class="terminology">置換(permutation)</dfn>という。これは<span class="process-math">\(X\)</span>の元を取り替える操作を表している。<div class="autopermalink" data-description="Paragraph"><a href="#definition-group-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.1.7"><a href="#definition-group-14" title="Copy heading and permalink for Example 2.1.7" aria-label="Copy heading and permalink for Example 2.1.7">🔗</a></div></article></details><div class="autopermalink" data-description="Section 2.1: 群の定義"><a href="#definition-group" title="Copy heading and permalink for Section 2.1: 群の定義" aria-label="Copy heading and permalink for Section 2.1: 群の定義">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="group-theory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-def-ring-field.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
