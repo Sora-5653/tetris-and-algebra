@@ -122,13 +122,13 @@
     <corollary>
         <statement>
             <p>
-                <m>a,b\in \mathbb Z</m>について、<m>ax+by=1</m>を満たす整数<m>(x,y)</m>が存在する。
+                <m>a,b\in \mathbb Z</m>について、<m>\mathrm{GCD}(a,b)=1<\m>なら<m>ax+by=1</m>を満たす整数<m>(x,y)</m>が存在する。
             </p>
         </statement>
     </corollary>
 
     <p>
-        整数<m>a</m>を任意にとる。系の<m>b</m>を素数<m>p</m>に対して適用し、等式<m>ax+bp=1</m>を得る。これを<m>\mathbb Z</m>から<m>\mathbb Z/p\mathbb Z</m>へ自然な写像で送ることにより、<m>ax = 1</m>となる。これは整数<m>a</m>に対して<m>x</m>がその乗法逆元であることを示している。これによって「有限体」の概念を定義できる。
+        整数<m>a</m>を素数<m>p<\m>と互いに素であるようにとる。系を<m>a<\m>と素数<m>p</m>に対して適用し、等式<m>ax+bp=1</m>を得る。これを<m>\mathbb Z</m>から<m>\mathbb Z/p\mathbb Z</m>へ自然な写像で送ることにより、<m>ax = 1</m>となる。これは整数<m>a</m>に対して<m>x</m>がその乗法逆元であることを示している。これによって「有限体」の概念を定義できる。
     </p>
 
     <definition xml:id="def-finite-field">
