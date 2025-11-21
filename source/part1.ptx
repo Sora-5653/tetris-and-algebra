@@ -49,6 +49,12 @@
 
   <chapter xml:id="ch-grp-action">
     <title>群作用</title>
+
+    <introduction>
+      <p>
+        この章では「作用」とよばれるものを定義し、基本的な定理である「Sylowの定理」を証明したのち、重要な応用先である「有限生成Abel群の基本定理」を示す。とくに後者に関しては、テトリスにおいても群の構造を調べるために使うなど、さまざまな応用がある。
+      </p>
+    </introduction>
     
     <xi:include href="./grp-action.ptx" />
 
