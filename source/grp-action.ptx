@@ -12,6 +12,102 @@
         このように、集合の元に関する「変化」を定量的に記述するのが群作用の概念である。この節では群作用を定義し、
     </p>
 
+    <definition>
+        <title>群作用</title>
+        
+        
+        <statement>
+            <p>
+                群<m>G</m>と集合<m>X</m>に関して、<m>G</m>の<m>X</m>への<term>左作用(left action)</term>とは、写像<m>\phi: G\times X \to X</m>で、次を満たすものである: <ol>
+                    <li>
+                        <p>
+                            <m>\phi(1_G,x)=x</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\phi(g,\phi(h,x))=\phi(gh,x)</m>
+                        </p>
+                    </li>
+                </ol>
+                (2)の代わりに<m>\phi(g,\phi(h,x))=\phi(hg,x)</m>を満たしているなら、<m>\phi</m>を<term>右作用(right action)</term>という。
+            </p>
+        </statement>
+    </definition>
     
+    <p>
+        作用<m>G\times X\to X</m>が存在するとき、<m>G</m>は<term>X</term>に<term>作用する(<m>G</m> acts on <m>X</m>)</term>という。以下、特に断らなければ作用は左作用であるとし、左作用の時には<m>\phi(g,x)</m>を<m>gx</m>と、右作用の時には<m>xg</m>と書く。
+    </p>
+
+    <p>
+        <m>gx=y</m>となっているとき<m>g</m>によって<m>x</m>が<m>y</m>に移るという。<m>g</m>を写像として考えた時、<m>g^{-1}</m>が<m>g</m>の逆写像なので、誘導される写像<m>g:X\ni x\mapsto gx</m>は全単射である。
+    </p>
+
+    <example>
+        <statement>
+            <p>
+            実数体上の一般線形群<m>\mathrm{GL_2(\mathbb R)}</m>と群<m>G</m>、および準同型<m>\wp: G\to \mathrm{GL_2(\mathbb R)}</m>があったとき、2次元列ベクトルとしての<m>\bm x\in \mathbb R^2</m>に対して、行列の積<m>\wp(g)\bm x</m>が定義できる。行列は結合的なので、<me>\wp(g)(\wp(h)\bm x)=(\wp(g)\wp(h))\bm x=\wp(gh)\bm x</me>である。これを<term>線形作用(linear action)</term>という。
+            </p>
+        </statement>
+    </example>
+
+    <p>
+        <m>G</m>が有限集合<m>\{x_1, \dots , x_n\}</m>に左から作用するとする。<m>x_{\wp(g)(i):=g\bullet x_i}</m>とおく。<m>\wp(g)</m>は<m>X</m>の置換をひきおこし、写像<m>\wp:G\to \mathfrak S</m>を誘導する。
+    </p>
+
+    <proposition>
+        <statement>
+            <p>
+                <m>\wp:G\to \mathfrak S</m>は準同型である。
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <m>x_{\wp(gh)(i)}=g(h\bullet x_i)=gx_{\wp(h)(i)}=x_{\wp(g)\circ \wp(h)(i)}</m>である。
+            </p>
+        </proof>
+    </proposition>
+
+    <p>
+        この<m>\wp</m>を<term>置換表現(permutation representation)</term>という。
+    </p>
+
+    <theorem>
+        <title>Cayleyの定理</title>
+        <statement>
+            <p>
+                <m>G</m>の位数が有限なら、単射<m>G\to \mathfrak S_n</m>が存在する。
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <m>G</m>から<m>G</m>への自然な作用を考える。置換表現<m>\wp</m>に対して<m>\wp(g)=1</m>なら、<m>gh=h;\forall h\in G</m>なので、<m>h=1_G</m>とすると、<m>g=1_G</m>になる。したがって<m>\ker(\wp)=\{1_G\}</m>である。これは単射性を意味する。実際、<m>\wp(g)-\wp(h)\in G</m>が<m>1_G</m>なら<m>\wp(g-h)\in \ker(\wp)</m>であり、<m>\ker(\wp)=\{1_G\}</m>であったから、両者は一致する。
+            </p>
+        </proof>
+    </theorem>
+
+    <definition>
+        <statement>
+            <p>
+                <m>G</m>が<m>X</m>に作用しているとする。<ol>
+                    <li>
+                        <p>
+                            <m>x\in X</m>に対して<me>\mathrm{Orb}_G(x):=\{gx; g\in G\}</me>と書き、<term>軌道(orbit)</term>という。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>x\in X</m>に対して<me>\mathrm{Orb}_G(x)=X</me>であるとき、この作用は<term>推移的(transitive)</term>であるという。<m>X</m>のことを等質空間ということもある。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <me>\mathrm{Stab}_G(x):=\{gx=x\}</me>と定義し、<m>X</m>の<term>安定化群(stabilizer group)</term>という。
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </definition>
     
 </section>

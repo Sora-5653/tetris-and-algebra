@@ -128,7 +128,7 @@
         </statement>
     </example>
 
-    <example>
+    <example xml:id="ex-covering">
         <title>トーラスと被覆写像</title>
         
         
