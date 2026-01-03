@@ -3,4 +3,75 @@
 <section xml:id="sec-commutator-solvable">
     <title>交換子群と可解群</title>
     
+    <definition>
+        <statement>
+            <p>
+                <m>G</m>を可換とは限らない群とする。
+               <ol>
+                <li>
+                    <p>
+                        <m>a, b\in G</m>に対し、<m>[a,b]=aba^{-1}b^{-1}</m>とおいて、<m>a,b</m>の<term>交換子(commutator)</term>という。
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>G</m>の任意の交換子全体を<m>[G,G]</m>と表記し、<m>G</m>の<term>交換子部分群(commutator subgroup)</term>という。これが正規部分群であることの確認はたやすい。
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>G^{ab}:=G/[G,G]</m>を群<m>G</m>の<term>Abel化(abelization)</term>という。
+                    </p>
+                </li>
+               </ol> 
+            </p>
+        </statement>
+    </definition>
+
+    <proposition>
+        <statement>
+            <p>
+                任意の群<m>G</m>のAbel化は常に可換群であり、準同型<m>\phi: G\to H</m>に対して、Abel化はその準同型<m>\phi^{ab}:G^{ab}\to H^{ab}</m>を誘導し、<m>\pi_H\circ\phi=\phi^{ab}\circ \pi_G</m>が成立する。
+            </p>
+            <p>
+                これにより、Abel化は<m>\mathbf{Grp}</m>から<m>\mathbf{AbGrp}</m>への関手<m>-^{ab}:Grp\to AbGrp</m>を定める(第5章参照)。
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <m>G^{ab}:=G/[G,G]</m>の元<m>a, b</m>をとる。定義より<m>a,b</m>は<m>a[G,G]</m>という形をしている。剰余演算の定義により<me>a[G,G]\bullet b[G,G]=(ab)[G,G]</me>である。<m>(ab)[G,G]=(ba)[G,G]</m>は<m>(ab)(ba)^{-1}\in [G,G]</m>と同値であるから、Abel化の定義により<m>G^{ab}</m>は可換である。
+            </p>
+            <p>
+                後半を示す。<m>\phi:G\to H</m>の存在を仮定する。<m>G^{ab}\to H^{ab}</m>を<m>a\mapsto \pi_H(\phi(a))</m>で定義すればよい。well-definednessは自明である。
+            </p>
+        </proof>
+    </proposition>
+
+    <definition>
+        <statement>
+            <p>
+                <m>G</m>を群とする。部分群の列<me>G=G_0\supset G_1\supset \cdots \supset G_n=\{1\}</me>が存在し、各<m>i</m>に対し<m>G_{i+1}\triangleleft G_i</m>であり、かつ<m>G_i/G_{i+1}</m>が可換群であるものを<term>可解群(solvable group)</term>という。
+            </p>
+            <p>
+                <m>Z(G)</m>を、任意の<m>g\in G</m>と可換な<m>G</m>の元からなる集合とし、これを<m>G</m>の<term>中心(center)</term>という。先ほど考えた列に対して、<m>G_{i+1}\triangleleft G</m>で、<m>G_i/G_{i+1}\subset Z(G/G_{i+1})</m>なら、<m>G</m>を<term>冪零群(nilpotent group)</term>という。
+            </p>
+        </statement>
+    </definition>
+
+    <example>
+        <statement>
+            <p>
+                3次対称群<m>\mathfrak S_3</m>は可解群である。実際、<m>N=(1,2,3)</m>とする。<m>\mathrm{sgn}(\sigma): \mathfrak S_n\to \{\pm 1\}</m>は準同型であることが容易にわかる。<m>n</m>次<term>交代群(alternating group)</term>を<m>A_n:=\ker(sgn)\triangleleft</m>で定めると、核は正規部分群なので、<m>A_n\triangleleft \mathfrak S_n</m>である。よって<m>N\triangleleft \mathfrak S_3</m>である。<m>(G:N)=2</m>だから<m>G/N\cong \mathbb Z/2\mathbb Z</m>だが、列<m>\mathfrak S_3 \supset A_3 \supset \{1\}</m>に対して<m>\mathbb Z/2\mathbb Z</m>は可換群なので、<m>\mathfrak S_3</m>は可解群であることがわかる。しかし<m>Z(\mathfrak S_3)</m>は
+            </p>
+        </statement>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+    </example>
+
 </section>
