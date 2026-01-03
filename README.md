@@ -73,7 +73,7 @@
 
 本書は、以下のウェブサイトにて常に最新版を閲覧することが可能である。
 
-- **[https://sora-5653.github.io/tetris-alg/frontmatter.html](https://sora-5653.github.io/tetris-alg/frontmatter.html)**
+- **[https://sora-5653.github.io/tetris-and-algebra/](https://sora-5653.github.io/tetris-and-algebra/)**
 
 ---
 
