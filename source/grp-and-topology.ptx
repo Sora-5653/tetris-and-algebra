@@ -57,7 +57,7 @@
     <example>
         <statement>
             <p>
-                定数<m>c\neq 0</m>に対し、<m>y=cx:(-\infty, \infty)\to (-\infty, \infty)</m>の連続性を示してみよう。任意の実数<m>q\gt 0</m>に対して実数<m>r\gt 0</m>を選び、<m>(a-r, a+r)\in (-\infty, \infty)</m>であり、<m>(a-r,a+r)</m>で<m>|cx-ca|\lt q</m>であるようにすればよい。積で絶対値はかわらないから<m>|cx-ca|=|c|\times|x-a|\lt q</m>となればよいことになる。<m>r=\frac{q}{|c|}\gt 0</m>とすれば、仮定より<m>|x-a|\lt r</m>なので、<m>|cx-ca|=|c|\times|x-a|\lt |c|r=q</m>である。
+                定数<m>c\neq 0</m>に対し、<m>y=cx:(-\infty, \infty)\to (-\infty, \infty)</m>の連続性を示してみよう。任意の実数<m>q\gt 0</m>に対して実数<m>r\gt 0</m>を選び、<m>(a-r, a+r)\subset (-\infty, \infty)</m>であり、<m>(a-r,a+r)</m>で<m>|cx-ca|\lt q</m>であるようにすればよい。積で絶対値はかわらないから<m>|cx-ca|=|c|\times|x-a|\lt q</m>となればよいことになる。<m>r=\frac{q}{|c|}\gt 0</m>とすれば、仮定より<m>|x-a|\lt r</m>なので、<m>|cx-ca|=|c|\times|x-a|\lt |c|r=q</m>である。
             </p>
         </statement>
     </example>
