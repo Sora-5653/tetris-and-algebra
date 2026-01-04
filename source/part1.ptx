@@ -58,6 +58,8 @@
     
     <xi:include href="./grp-action.ptx" />
 
+    <xi:include href="./commutator-solvable.ptx" />
+
   </chapter>
 
 </part>
