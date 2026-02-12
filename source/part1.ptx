@@ -62,4 +62,14 @@
 
   </chapter>
 
+  <chapter xml:id="ch-com-ring">
+    <title>可換環論</title>
+    
+  </chapter>
+
+  <chapter xml:id="ch-category">
+    <title>圏論</title>
+    
+  </chapter>
+
 </part>

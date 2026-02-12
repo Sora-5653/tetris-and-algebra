@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-category">
+    <title>圏と関手</title>
+    <p>
+        ここまで、我々は群、位相空間、そして環の一般論を見てきた。我々の歩いてきたところを振り返ってみれば、それらを繋ぐ共通の構造が存在することに気づくだろう。それは、対象と対象間を結ぶ「良い関数」の存在である。
+        例えば、群であれば群準同型写像、位相空間であれば連続写像、環であれば環準同型写像がそれにあたる。これらの「良い関数」は、それぞれの対象の構造を保存するという共通の性質を持っている。
+        これらの対象と「良い関数」を一つにまとめたものが<term>圏(category)</term>であり、対象間を結ぶ「良い関数」をまとめたものが<term>関手(functor)</term>である。
+        圏と関手の概念は、数学の様々な分野において重要な役割を果たしており、我々がこれまで学んできた構造をより深く理解するための道具となる。
+    </p>
+
+    <definition xml:id="def-category">
+
+        <title>圏</title>
+        
+        
+
+        <statement>
+            <p>
+                圏(category)<m>C</m>は、次の所与により成り立つ:
+
+                <ol>
+                    <li>
+                        <p>
+                            対象とよばれるものの集まり<m>\mathrm{Ob}(C)</m>。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            各対象<m>A,B \in \mathrm{Ob}(C)</m>に対し、<m>A</m>から<m>B</m>への射とよばれるものの集まり<m>\mathrm{Hom}_C(A,B)</m>。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            各対象<m>A \in \mathrm{Ob}(C)</m>に対し、恒等射とよばれる射<m>\mathrm{id}_A \in \mathrm{Hom}_C(A,A)</m>。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            射の合成とよばれる二項演算<m>\circ: \mathrm{Hom}_C(B,C) \times \mathrm{Hom}_C(A,B) \to \mathrm{Hom}_C(A,C)</m>。任意の射<m>f \in \mathrm{Hom}_C(A,B)</m>、<m>g \in \mathrm{Hom}_C(B,C)</m>に対し、合成射<m>g \circ f \in \mathrm{Hom}_C(A,C)</m>が定義される。
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </definition>
+
+</section>
