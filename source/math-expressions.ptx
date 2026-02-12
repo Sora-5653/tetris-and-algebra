@@ -58,6 +58,11 @@
                     </p>
                     </example>
                 </li>
+                <li>
+                    <p>
+                        
+                    </p>
+                </li>
             </ol>
         </p>
         
@@ -98,6 +103,25 @@
                         </example>
                     </p>
                 </li>
+                <li>
+                    <p>
+                        <example>
+                            <title>構成</title>
+                            
+                            <p>
+                                <term>構成(construction)</term>
+                            </p>
+                            <p>
+                                ある対象を具体的に定義したり、作り出したりすること。例えば「集合<m>A</m>の冪集合の構成」は「集合<m>A</m>からその部分集合全体の集合を作り出すこと」を意味する。
+                            </p>
+                        </example>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        
+                    </p>
+                </li>
             </ol>
         </p>
         
@@ -128,6 +152,25 @@
                         </example>
                     </p>
                 </li>
+                <li>
+                    <p>
+                        <example>
+                            <title>証明</title>
+                            
+                            <p>
+                                <term>証明(Proof)</term>
+                            </p>
+                            <p>
+                                命題が真であることを論理的に示す過程。一般に、既知の事実や公理から出発し、論理的推論を積み重ねて結論に至る。
+                            </p>
+                        </example>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        
+                    </p>
+                </li>
             </ol>
         </p>
 
@@ -150,6 +193,36 @@
                                 命題のうち、特に理論的に重要であるものや、便利であるもの。このあたりの命名規則に明確な線引きは存在せず、分野によって異なる暗黙の了解によって振り分けられるのが基本だが、著者の裁量で変化しうる。
                             </p>
                         </example>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <example>
+                            <title>定義</title>
+                            
+                            <p>
+                                <term>定義(Definition)</term>
+                            </p>
+                            <p>
+                                ある数学的対象や用語の意味を明確にすること。例えば「群とは、集合と二項演算が特定の公理を満たすものである」といった具合に、その対象の性質や構造を規定する。
+                            </p>
+                        </example>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       <example>
+                        <title>強い主張(strong statement)</title>
+
+                        <p>
+                            ある命題が他の命題よりも多くの情報を含んでいる場合、その命題は「強い主張」であると言われる。例えば、命題Pが命題Qを含意する場合、PはQよりも強い主張である。
+                        </p>
+
+                        <p>
+                            (対) 弱い主張(weak statement)
+                        </p>
+                        
+                       </example> 
                     </p>
                 </li>
             </ol>
@@ -179,6 +252,11 @@
                         </example>
                     </p>
                 </li>
+                <li>
+                    <p>
+                        
+                    </p>
+                </li>
             </ol>
         </p>
         
@@ -202,6 +280,11 @@
                             </p>
                             
                         </example>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        
                     </p>
                 </li>
             </ol>
@@ -239,6 +322,11 @@
                         </example>
                     </p>
                 </li>
+                <li>
+                    <p>
+                        
+                    </p>
+                </li>
             </ol>
         </p>
 
@@ -247,16 +335,70 @@
     <subsection xml:id="subsec-yagyou">
         <title>や行</title>
         
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        <example>
+                            <title>約束する</title>
+
+                            <p>
+                                <term>約束する(to denote, to mean)</term>
+                            </p>
+                            <p>
+                                ある記号や用語が特定の意味を持つことを定めること。例えば「ここで<m>f: A\to B</m>と約束する」とあれば、「以降、<m>f</m>は集合<m>A</m>から<m>B</m>への写像を表す」となる。
+                            </p>
+                            
+                        </example>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <example>
+                            <title>予想</title>
+                            
+                            <p>
+                                <term>予想(Conjecture)</term>
+                            </p>
+                            <p>
+                                十分な証明がないが、真であると信じられている命題。数学においては、証明されていない命題を指すことが多い。
+                            </p>
+                        </example>
+                    </p>
+                </li>
+            </ol>
+        </p>
+
     </subsection>
 
     <subsection xml:id="subsec-ragyou">
         <title>ら行</title>
+
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        
+                    </p>
+                </li>
+            </ol>
+        </p>
         
     </subsection>
 
     <subsection xml:id="subsec-wagyou">
         <title>わ行</title>
         
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        
+                    </p>
+                </li>
+            </ol>
+        </p>
+
     </subsection>
 
     </chapter>

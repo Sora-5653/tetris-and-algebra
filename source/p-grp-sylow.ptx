@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-p-group">
+    <title>p-群</title>
+    <definition xml:id="def-p-grp">
+        <statement>
+            <p>
+                有限群<m>G</m>の位数が素数<m>p</m>の整数冪であるとき、<m>G</m>を<term>p-群(p-group)</term>という。
+            </p>
+        </statement>
+    </definition>
+
+    
+</section>
