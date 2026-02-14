@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>コラム:群とトポロジー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="テトリスと代数学">
+<meta property="book:author" content="著者: Sora3">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.14';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">テトリスと代数学</span> <span class="subtitle">Algebra and its application to Tetris</span></a></h1>
+<p class="byline">著者: Sora3</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-hom-theorems.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="group-theory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-ex-chap2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-1.html" class="internal"><span class="codenumber">I</span> <span class="title">代数学の基礎</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="set-theory.html" class="internal"><span class="codenumber">1</span> <span class="title">集合論</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sets-and-mathematics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">集合と現代数学</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="set-and-logic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">集合と論理</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="well-definedness.html" class="internal"><span class="codenumber">1.3</span> <span class="title">well-definedness</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="choice-and-zorn.html" class="internal"><span class="codenumber">1.4</span> <span class="title">選択公理とZorn’s Lemma</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cardinality-of-sets.html" class="internal"><span class="codenumber">1.5</span> <span class="title">集合の濃度</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercise-of-chapter1.html" class="internal"><span class="codenumber">1.6</span> <span class="title">第1章の演習問題と略解</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercise-of-chapter1.html#exercises-chapter1" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="group-theory.html" class="internal"><span class="codenumber">2</span> <span class="title">群論</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="definition-group.html" class="internal"><span class="codenumber">2.1</span> <span class="title">群の定義</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-def-ring-field.html" class="internal"><span class="codenumber">2.2</span> <span class="title">環, 体の定義</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subgroup-and-generator.html" class="internal"><span class="codenumber">2.3</span> <span class="title">部分群と生成元</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-homomorphism.html" class="internal"><span class="codenumber">2.4</span> <span class="title">準同型写像</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-quot-grp.html" class="internal"><span class="codenumber">2.5</span> <span class="title">剰余群</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quot-grp.html#subsec-equiv-relation" class="internal"><span class="codenumber">2.5.1</span> <span class="title">同値関係</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quot-grp.html#subsec-quot-group" class="internal"><span class="codenumber">2.5.2</span> <span class="title">剰余類</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quot-grp.html#sec-quot-grp-9" class="internal"><span class="codenumber">2.5.3</span> <span class="title">剰余群</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-hom-theorems.html" class="internal"><span class="codenumber">2.6</span> <span class="title">準同型定理</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-hom-theorems.html#sec-hom-theorems-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">可換図式</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-hom-theorems.html#sec-hom-theorems-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">準同型定理</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-grp-and-topology.html" class="internal"><span class="codenumber">2.7</span> <span class="title">コラム:群とトポロジー</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-ex-chap2.html" class="internal"><span class="codenumber">2.8</span> <span class="title">第2章の演習問題と略解</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-ex-chap2.html#sec-ex-chap2-2" class="internal"><span class="codenumber">2.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-grp-action.html" class="internal"><span class="codenumber">3</span> <span class="title">群作用</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-grp-action.html" class="internal"><span class="codenumber">3.1</span> <span class="title">群作用</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-commutator-solvable.html" class="internal"><span class="codenumber">3.2</span> <span class="title">交換子群と可解群</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-com-ring.html" class="internal"><span class="codenumber">4</span> <span class="title">可換環論</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-category.html" class="internal"><span class="codenumber">5</span> <span class="title">圏論</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-category.html" class="internal"><span class="codenumber">5.1</span> <span class="title">圏と関手</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-appendix.html" class="internal"><span class="codenumber">II</span> <span class="title">付録</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sec-math-expressions.html" class="internal"><span class="codenumber">6</span> <span class="title">数学的な言い回し</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-agyou.html" class="internal"><span class="codenumber">6.1</span> <span class="title">あ行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-kagyou.html" class="internal"><span class="codenumber">6.2</span> <span class="title">か行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-sagyou.html" class="internal"><span class="codenumber">6.3</span> <span class="title">さ行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-tagyou.html" class="internal"><span class="codenumber">6.4</span> <span class="title">た行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-nagyou.html" class="internal"><span class="codenumber">6.5</span> <span class="title">な行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-hagyou.html" class="internal"><span class="codenumber">6.6</span> <span class="title">は行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-magyou.html" class="internal"><span class="codenumber">6.7</span> <span class="title">ま行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-yagyou.html" class="internal"><span class="codenumber">6.8</span> <span class="title">や行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-ragyou.html" class="internal"><span class="codenumber">6.9</span> <span class="title">ら行</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-wagyou.html" class="internal"><span class="codenumber">6.10</span> <span class="title">わ行</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-top-space.html" class="internal"><span class="codenumber">7</span> <span class="title">位相空間論</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-top-space.html" class="internal"><span class="codenumber">7.1</span> <span class="title">位相空間</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-grp-and-topology"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">コラム:群とトポロジー</span>
+</h2>
+<div class="para" id="sec-grp-and-topology-2">まず位相空間の定義をする前に、微積分の話をしよう。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-grp-and-topology-3">
+<span class="process-math">\(u\lt x \lt v\)</span>を満たす<span class="process-math">\(x\)</span>を<span class="process-math">\((u,v)\)</span>で表し、これを<dfn class="terminology">開区間</dfn>と呼ぶ。同様に<span class="process-math">\(u\leq x \leq v\)</span>を<span class="process-math">\(x\in [u,v]\)</span>で表し、閉区間とよぶ。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-epsilon-delta"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-epsilon-delta-1-1">
+<span class="process-math">\(y=f(x)\)</span>を<span class="process-math">\((u,v)\)</span>で定義された関数とし、<span class="process-math">\(a\in (u,v)\)</span>とする。関数<span class="process-math">\(y=f(x)\)</span>が<span class="process-math">\(x=a\)</span>で<dfn class="terminology">連続(continuous)</dfn>であるとは、任意の実数<span class="process-math">\(q\gt 0\)</span>に対して実数<span class="process-math">\(r \gt 0\)</span>が存在して、<span class="process-math">\(x\in (a-r,a+r)\subset (u,v)\)</span>であり、<span class="process-math">\(|f(x)-f(a)|\lt q\)</span>となるときをいう。<div class="autopermalink" data-description="Paragraph"><a href="#def-epsilon-delta-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.7.1"><a href="#def-epsilon-delta" title="Copy heading and permalink for Definition 2.7.1" aria-label="Copy heading and permalink for Definition 2.7.1">🔗</a></div></article><div class="para" id="sec-grp-and-topology-5">非常にわかりにくい定義だが、次のようにグラフを書いてみるとよい:<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/sec-grp-and-topology-6.svg" role="img" class="contained"></div>
+<div class="para logical" id="sec-grp-and-topology-7">
+<div class="para">今の定義は、<span class="process-math">\(x\)</span>が<span class="process-math">\(a\)</span>に近づくとき、<span class="process-math">\(f(x)\)</span>が<span class="process-math">\(f(a)\)</span>に近づくことを不等式で表すものである。 <span class="process-math">\(x\in (a-r,a+r)\)</span>とはそれすなわち</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|x-a|\lt r \tag{1.1}
+\end{equation*}
+</div>
+<div class="para">であり、「<span class="process-math">\(x\in (u,v)\)</span>ならば<span class="process-math">\(|f(x)-f(a)|\lt q\)</span>」は、任意の、どれだけ小さくとってもよい実数<span class="process-math">\(q\)</span>に対して、(1.1)をみたす<span class="process-math">\(r\)</span>を見つけてこられることを意味する。 したがってこの定義は、<span class="process-math">\(x\)</span>と<span class="process-math">\(a\)</span>の差が非常に小さければ、それに応じて<span class="process-math">\(f(x)\)</span>と<span class="process-math">\(f(a)\)</span>の差も非常に小さくなるというふうなことを、「近づく」とかいう曖昧な言葉を使わずに定義したものである。このような議論を「イプシロン・デルタ論法」という。</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-grp-and-topology-8">具体例を見よう。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-grp-and-topology-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="sec-grp-and-topology-9-1-1">定数<span class="process-math">\(c\neq 0\)</span>に対し、<span class="process-math">\(y=cx:(-\infty, \infty)\to (-\infty, \infty)\)</span>の連続性を示してみよう。任意の実数<span class="process-math">\(q\gt 0\)</span>に対して実数<span class="process-math">\(r\gt 0\)</span>を選び、<span class="process-math">\((a-r, a+r)\subset (-\infty, \infty)\)</span>であり、<span class="process-math">\((a-r,a+r)\)</span>で<span class="process-math">\(|cx-ca|\lt q\)</span>であるようにすればよい。積で絶対値はかわらないから<span class="process-math">\(|cx-ca|=|c|\times|x-a|\lt q\)</span>となればよいことになる。<span class="process-math">\(r=\frac{q}{|c|}\gt 0\)</span>とすれば、仮定より<span class="process-math">\(|x-a|\lt r\)</span>なので、<span class="process-math">\(|cx-ca|=|c|\times|x-a|\lt |c|r=q\)</span>である。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.7.2"><a href="#sec-grp-and-topology-9" title="Copy heading and permalink for Example 2.7.2" aria-label="Copy heading and permalink for Example 2.7.2">🔗</a></div></article></details><div class="para" id="sec-grp-and-topology-10">さて、関数の連続性とはさしづめ「関数のグラフが繋がっていること」と見てよい。これは定義からわかるように、実数を任意にとることで小ささを表現するという、実数体でしか意味をなさない定義の仕方をしている。一般の集合や体に大小関係<span class="process-math">\(\leq\)</span>は定義されないわけだから、これを任意の集合に一般化できないか？というのが位相空間を考える動機である。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-grp-and-topology-11">では、位相空間の定義をしよう。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-top-space"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-top-space-1-1">
+<div class="para">
+<span class="process-math">\(X\)</span>を集合とする。<span class="process-math">\(X\)</span>上の<dfn class="terminology">開集合系(open set system)</dfn>あるいは<dfn class="terminology">位相(topology)</dfn>とは、<span class="process-math">\(\mathscr O\subset \mathcal P(X)\)</span>が次の条件を満たすことをいう:</div>
+<ol class="decimal" id="def-top-space-1-1-6">
+<li id="def-top-space-1-1-6-1">
+<div class="para" id="def-top-space-1-1-6-1-1">
+<span class="process-math">\(\emptyset, X \in \mathscr O\)</span>である。<div class="autopermalink" data-description="Paragraph"><a href="#def-top-space-1-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#def-top-space-1-1-6-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="def-top-space-1-1-6-2">
+<div class="para" id="def-top-space-1-1-6-2-1">
+<span class="process-math">\((U_i)_{i\in I}\)</span>が<span class="process-math">\(\mathcal P(X)\)</span>の族なら、<span class="process-math">\(\bigcup_{i\in I}U_i \in \mathscr O\)</span>である。<div class="autopermalink" data-description="Paragraph"><a href="#def-top-space-1-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#def-top-space-1-1-6-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="def-top-space-1-1-6-3">
+<div class="para" id="def-top-space-1-1-6-3-1">
+<span class="process-math">\((U_i)_{i\in I}\)</span>が<span class="process-math">\(\mathcal P(X)\)</span>の族で<span class="process-math">\(I\)</span>が有限なら、<span class="process-math">\(\bigcap_{i\in I} U_i\in \mathscr O\)</span>である。<div class="autopermalink" data-description="Paragraph"><a href="#def-top-space-1-1-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#def-top-space-1-1-6-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-top-space-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.7.3"><a href="#def-top-space" title="Copy heading and permalink for Definition 2.7.3" aria-label="Copy heading and permalink for Definition 2.7.3">🔗</a></div></article><div class="para" id="sec-grp-and-topology-13">これもなかなかにわかりにくい定義である。だが、先ほど言ったとおり位相空間の理論は<span class="process-math">\(\mathbb R\)</span>や<span class="process-math">\(\mathbb R^n\)</span>での連続性を抽象化しているため、対応する現象を紹介しつつ話を進めていこう。定義での<span class="process-math">\(\mathscr O\)</span>として、<dfn class="terminology">任意の開区間の和で得られる集合全体</dfn>を採用する。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-grp-and-topology-14">まず(1)の条件だが、これは<span class="process-math">\(\mathbb R, \emptyset\)</span>が開区間になりえることを言っている。空集合の場合は<span class="process-math">\((a,a)\)</span>とすればよい。実際<span class="process-math">\((a,a)\)</span>は<span class="process-math">\(a\lt x\lt a\)</span>を満たす<span class="process-math">\(x\)</span>のことだが、そんなものはない。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-grp-and-topology-15">実数全体は少しトリッキーだが、<span class="process-math">\((-\infty, \infty)\)</span>とすればよい。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-grp-and-topology-16">次に(2)の条件であるが、これは定義通りであり、確認は易しい。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-grp-and-topology-17">最後に(3)の条件について説明する。(3)は<dfn class="terminology">開区間</dfn>の<dfn class="terminology">有限</dfn>な共通部分が再び開集合であることを言っている。これは次の解析的な定理の反例からくる事項である。証明は行わない。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-grp-and-topology-18">なお、(開/閉)区間<span class="process-math">\(I\)</span>がある有限の実数により<span class="process-math">\([a,b]\)</span>や<span class="process-math">\((a,b)\)</span>と表される時、それは有界であるという。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="sec-grp-and-topology-19"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">区間縮小法.</span>
+</h3>
+<div class="para logical" id="sec-grp-and-topology-19-2-1">
+<div class="para">有界閉区間の列<span class="process-math">\((I_n)\)</span>が単調減少、すなわち</div>
+<ol class="decimal" id="sec-grp-and-topology-19-2-1-2">
+<li id="sec-grp-and-topology-19-2-1-2-1">
+<div class="para logical" id="sec-grp-and-topology-19-2-1-2-1-1">
+<div class="para">すべての<span class="process-math">\(n\in \mathbb N\)</span>について<span class="process-math">\(I_n\supset I_{n+1}\)</span>であるとき、全ての<span class="process-math">\(I_n\)</span>に含まれる実数</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcap_{n\in \mathbb N} I_n \neq \emptyset
+\end{equation*}
+</div>
+<div class="para">が存在する。</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-19-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-grp-and-topology-19-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-grp-and-topology-19-2-1-2-2">
+<span class="heading li--heading"><span class="title li--heading-title">*.</span></span><div class="para logical" id="sec-grp-and-topology-19-2-1-2-2-2">
+<div class="para">特に<span class="process-math">\(I_n=[a_n,b_n]\)</span>とするとき、</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n\to \infty} (b_n-a_n)=0
+\end{equation*}
+</div>
+<div class="para">となる。</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-19-2-1-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2: *"><a href="#sec-grp-and-topology-19-2-1-2-2" title="Copy heading and permalink for Item 2: *" aria-label="Copy heading and permalink for Item 2: *">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-19-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.7.4: 区間縮小法"><a href="#sec-grp-and-topology-19" title="Copy heading and permalink for Theorem 2.7.4: 区間縮小法" aria-label="Copy heading and permalink for Theorem 2.7.4: 区間縮小法">🔗</a></div></article><div class="para" id="sec-grp-and-topology-20">この定理は開区間については成り立たない。例えば<span class="process-math">\(I_n=(0,\frac{1}{2^n})\)</span>などがある。極限についての知識がなければ「空集合なんだろうな」とだけ思っていればよい。<div class="autopermalink" data-description="Paragraph"><a href="#sec-grp-and-topology-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 2.7: コラム:群とトポロジー"><a href="#sec-grp-and-topology" title="Copy heading and permalink for Section 2.7: コラム:群とトポロジー" aria-label="Copy heading and permalink for Section 2.7: コラム:群とトポロジー">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-hom-theorems.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-ex-chap2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
