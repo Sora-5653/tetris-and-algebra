@@ -69,6 +69,8 @@
 
   <chapter xml:id="ch-category">
     <title>圏論</title>
+
+    <xi:include href="./category.ptx" />
     
   </chapter>
 
